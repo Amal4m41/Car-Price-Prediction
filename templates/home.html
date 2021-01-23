@@ -1,0 +1,100 @@
+{% extends 'layout.html' %}
+{% block content%}
+
+<div >
+    <form class="ui form" id='container' method="POST" action="/predict">
+      <div class="field">
+        <label for="year">Year of purchase : </label>
+        <input type="number"  id="year" name="year" placeholder="eg 2021" required>
+      </div>
+      <div class="field">
+        <label for="present_price">Present Price (in lakhs): </label>
+        <input type="number"  id='present_price' name='present_price' placeholder="Price in lakhs" step="any" required>
+      </div>
+      <div class="field">
+        <label for='kms'>Kms Driven : </label>
+        <input type="number"  id='kms' name='kms' placeholder="Kms" step="any" required>
+      </div>
+
+      <div class="ui form">
+        <div class="inline fields">
+          <label>Fuel type : </label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" id='1' name="fuel_type" value='petrol' required>
+              <label for='1'>Petrol</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" id='2' name="fuel_type" value='diesel'>
+              <label for="2">Diesel</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" id='3' name="fuel_type" value='cng'>
+              <label for='3'>CNG</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="ui form">
+        <div class="inline fields">
+          <label>Seller : </label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" id='1' name="seller" value='individual' required>
+              <label for='1'>Individual</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" id='2' name="seller" value='dealer'>
+              <label for="2">Dealer</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui form">
+        <div class="grouped fields">
+          <label>Transmission : </label>
+          <div class="field">
+            <div class="ui slider checkbox">
+              <input type="radio" id='1' name="transmission" checked="checked" value='manual'>
+              <label for='1'>Manual</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui slider checkbox">
+              <input type="radio" id='2' name="transmission" value="automatic">
+              <label for='2'>Automatic</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui form">
+        <div class="grouped fields">
+          <label>Owner : </label>
+          <div class="field">
+            <div class="ui slider checkbox">
+              <input type="radio" id='1' name="owner" checked="checked" value='first_owner'>
+              <label for='1'>First Owner</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui slider checkbox">
+              <input type="radio" id='2' name="owner" value="second_owner">
+              <label for='2'>Second owner</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="ui button" type="submit">Calculate Selling Price</button>
+    </form>
+
+</div>
+    
+{% endblock %}    

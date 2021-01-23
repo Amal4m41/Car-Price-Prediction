@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <title>Home</title>
+</head>
+<body id='showcase'>
+    <h2 id='mainHeader'>Car Price Prediction</h2>
+    {% block content%}
+    {% endblock %}
+</body>
+</html>
+
+<style >
+#container{
+        margin:0 30% 0 30%;
+    }
+body{
+    background-color: rgb(225, 180, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin:0px;
+}
+#mainHeader{
+    text-align:center;
+    background-color: rgb(24, 5, 14);
+    color: white;
+    padding: 2%;
+}
+/* #showcase{
+    background-image: url('image/note_image2.jpg');
+    background-position: center center ;
+    min-height: 300px;   
+    
+} */
+.field{
+    font-size: 20px;
+}
+
+#prediction{
+    font-size: 25px;
+    text-align: center;
+    font-style: inherit
+}
+
+</style>
