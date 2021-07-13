@@ -1,4 +1,4 @@
-# CarPrice_Prediction
+# Car-Price-Prediction
 Car Price Prediction using Random Forest Regressor and deploying the same in Heroku with a simple Frontend and FastApi<br>
 <br>
 The web app can be used to predict the market value for used cars that can help both buyers and sellers.<br><br>
